@@ -12,6 +12,14 @@ The input array will always contain only positive numbers and will never be empt
 The input array should not be modified!
 */
 
-function squareOrSquareRoot(array) {
-  return array;  
+const squareOrSquareRoot = (array) => {
+  let arr = [];
+  for(let i = 0; i < array.length; i++) {
+    if(Math.sqrt(array[i]) === Math.floor(Math.sqrt(array[i]))) {
+      arr.push(Math.sqrt(array[i]));
+    } else {
+      arr.push(Math.pow(array[i], 2));
+    }
+  }
+  return arr;  
 }
